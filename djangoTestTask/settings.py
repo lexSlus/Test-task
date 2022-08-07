@@ -123,3 +123,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+api_key = '7b88e90dfad2f86bf250b0ac388176ec'
+url_clicks = 'http://136.244.93.168/admin_api/v1/clicks/log'
+url_conversions = 'http://136.244.93.168/admin_api/v1/conversions/log'
