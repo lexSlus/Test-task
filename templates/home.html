@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container my-5">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-md">
+                {% if user.is_authenticated %}
+                    <h2>Вы авторизованы</h2>
+                    <a class="navbar-brand" href="{% url 'logout' %}">Выйти</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+
+    <div class="container my-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">interval</th>
+                <th scope="col">Sub_id_6</th>
+                <th scope="col">Clicks</th>
+                <th scope="col">Conversions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Today</th>
+                <td>{{ sub_id_6 }}</td>
+                <td>{{ clicks }}</td>
+                <td>{{ conversions }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Yesterday</th>
+                <td>{{ sub_id_6 }}</td>
+                <td>{{ clicks }}</td>
+                <td>{{ conversions }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Week</th>
+                <td>{{ sub_id_6 }}</td>
+                <td>{{ clicks }}</td>
+                <td>{{ conversions }}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}
