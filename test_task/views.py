@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from forms import UserLogInForm
 from django.contrib.auth.views import LoginView
-from api import Keitaro
-from djangoTestTask.settings import api_key, url_clicks, url_conversions
+from test_task.api import Keitaro
+from config.config import api_key, url_clicks, url_conversions
 
 # Create your views here.
 
@@ -19,7 +19,6 @@ class LogInUser(LoginView):
 
 @login_required
 def home(request):
-
 
     total_clicks = Keitaro(api_key, url_clicks, limit=10).get_exact()
     total_conversions = Keitaro(api_key, url_conversions, limit=10).get_exact()

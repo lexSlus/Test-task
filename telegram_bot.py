@@ -3,9 +3,9 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup,\
     InlineKeyboardButton, InlineKeyboardMarkup
+from config.config import token
 
 
-token = '5290879377:AAHAh3hRtHE1xrMNFE9gQ908rBF3yfDn-nk'
 bot = Bot(token=token)
 dp = Dispatcher(bot)
 
